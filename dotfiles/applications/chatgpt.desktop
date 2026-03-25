@@ -1,0 +1,7 @@
+[Desktop Entry]
+Name=Chatgpt
+Exec=chromium-browser --app=https://chatgpt.com --kiosk
+Icon=chatgpt
+Type=Application
+Categories=Network;
+

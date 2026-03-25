@@ -1,0 +1,194 @@
+" ============================================================
+" IDEAVIM CONFIG — STRUCTURED & COMMENTED
+" ============================================================
+" Philosophy:
+" - Keep config minimal and intentional
+" - Group related settings
+" - Add comments explaining WHY (not just WHAT)
+" - Easy to extend later without confusion
+"
+" Reload config inside IDE:
+"   :source ~/.ideavimrc
+" ============================================================
+
+
+
+" ============================================================
+" 1. CORE EDITOR BEHAVIOR
+" ============================================================
+" These settings control basic Vim behavior inside JetBrains
+
+" Keep 5 lines visible above/below cursor (better context while scrolling)
+set scrolloff=5
+
+" Enable incremental search (shows matches while typing)
+set incsearch
+
+" Highlight search results (use :nohlsearch to clear)
+set hlsearch
+
+" Case-insensitive search unless uppercase is used
+set ignorecase
+set smartcase
+
+" Allow backspace to behave like modern editors
+set backspace=indent,eol,start
+
+" Use system clipboard (copy/paste with OS)
+set clipboard+=unnamedplus
+
+" this is for the line number selection
+
+set relativenumber
+set number
+
+" ============================================================
+" 2. KEY REMAPS (PURE VIM)
+" ============================================================
+" These do NOT involve IDE actions, only Vim behavior
+
+" Disable Ex mode (accidentally triggered by Q)
+nnoremap Q <nop>
+
+" Use Q for formatting (reflow paragraph)
+nnoremap Q gq
+
+" Faster escape from insert mode (optional, muscle-memory dependent)
+" Uncomment if you like:
+inoremap jk <Esc>
+
+
+
+" ============================================================
+" 3. LEADER KEY CONFIGURATION
+" ============================================================
+" Leader key is the prefix for custom shortcuts
+" Common choices: <Space>, ',', '\'
+
+let mapleader=" "     " Using SPACE as leader (recommended)
+
+
+
+" ============================================================
+" 4. IDE ACTION MAPPINGS (MOST IMPORTANT SECTION)
+" ============================================================
+" These connect Vim keys → JetBrains IDE features
+"
+" How to find actions:
+"   Press Ctrl+Shift+A → search action name
+"   Then use: <Action>(ExactActionName)
+
+" ----------------------
+" CODE NAVIGATION
+" ----------------------
+
+" Go to declaration (like Ctrl+B)
+nnoremap gd <Action>(GotoDeclaration)
+
+" Go to implementation
+nnoremap gi <Action>(GotoImplementation)
+
+" Find usages (very important for Java)
+nnoremap gr <Action>(FindUsages)
+
+" Go back in navigation history
+nnoremap gb <Action>(Back)
+
+
+" ----------------------
+" FILE / SEARCH
+" ----------------------
+
+" Search files (Ctrl+Shift+N)
+nnoremap <leader>f <Action>(GotoFile)
+
+" Global search (double shift alternative)
+nnoremap <leader>s <Action>(SearchEverywhere)
+
+" Recent files popup
+nnoremap <leader>e <Action>(RecentFiles)
+
+
+" ----------------------
+" REFACTORING
+" ----------------------
+
+" Rename symbol (Shift+F6)
+nnoremap <leader>r <Action>(RenameElement)
+
+
+" ----------------------
+" CODE FORMATTING
+" ----------------------
+
+" Reformat code (Ctrl+Alt+L)
+nnoremap <leader>= <Action>(ReformatCode)
+
+
+" ----------------------
+" RUN / DEBUG
+" ----------------------
+
+" Run current configuration
+nnoremap <leader>rr <Action>(Run)
+
+" Debug current configuration
+nnoremap <leader>dd <Action>(Debug)
+
+" Toggle breakpoint
+nnoremap <leader>b <Action>(ToggleLineBreakpoint)
+
+
+" ----------------------
+" TOOL WINDOWS
+" ----------------------
+
+" Open terminal window
+nnoremap <leader>t <Action>(ActivateTerminalToolWindow)
+
+
+
+" ============================================================
+" 5. WINDOW NAVIGATION (VIM SPLITS)
+" ============================================================
+" Works only if you use splits inside IDE
+
+nnoremap <leader>h <C-w>h
+nnoremap <leader>j <C-w>j
+nnoremap <leader>k <C-w>k
+nnoremap <leader>l <C-w>l
+
+
+
+" ============================================================
+" 6. PLUGINS (LIMITED SUPPORT)
+" ============================================================
+" IdeaVim supports only a small subset of Vim plugins
+
+" Highlight yanked text (visual feedback on copy)
+Plug 'machakann/vim-highlightedyank'
+
+" Easy commenting (gcc, gc motion)
+Plug 'tpope/vim-commentary'
+
+
+
+" ============================================================
+" 7. EXPERIMENT ZONE (SAFE AREA)
+" ============================================================
+" Add new mappings here before moving them above
+" Helps keep config clean and tested
+
+" Example:
+" nnoremap <leader>x <Action>(SomeNewAction)
+
+
+
+" ============================================================
+" END OF CONFIG
+" ============================================================
+" Notes:
+" - Keep adding mappings based on real usage
+" - Avoid copying large configs blindly
+" - Optimize for YOUR workflow, not others
+" ============================================================

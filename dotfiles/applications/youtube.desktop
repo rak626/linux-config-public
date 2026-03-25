@@ -1,0 +1,7 @@
+[Desktop Entry]
+Name=YouTube
+Exec=chromium-browser --app=https://www.youtube.com --class=youtube --kiosk
+Icon=youtube
+Type=Application
+Categories=AudioVideo;
+StartupNotify=true
