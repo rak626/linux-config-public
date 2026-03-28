@@ -1,0 +1,31 @@
+/* ===== GRUVBOX COLOR PALETTE ===== */
+
+@define-color bg0        #282828;
+@define-color bg1        #3c3836;
+@define-color bg2        #504945;
+@define-color bg_soft    #2b2b2b;
+
+@define-color fg0        #fbf1c7;
+@define-color fg1        #ebdbb2;
+@define-color fg2        #d5c4a1;
+@define-color fg_muted   #928374;
+
+@define-color yellow     #fabd2f;
+@define-color orange     #fe8019;
+@define-color red        #fb4934;
+@define-color dark_red   #cc241d;
+
+@define-color green      #b8bb26;
+@define-color aqua       #8ec07c;
+@define-color blue       #83a598;
+@define-color teal       #458588;
+
+/* ===== TRANSPARENCY VARIANTS ===== */
+
+@define-color bg_transparent rgba(40, 40, 40, 0.85);
+@define-color card_bg        rgba(60, 56, 54, 0.6);
+
+@define-color blue_soft      rgba(131, 165, 152, 0.15);
+@define-color red_soft       rgba(204, 36, 29, 0.2);
+@define-color yellow_soft    rgba(250, 189, 47, 0.2);
+@define-color green_soft     rgba(184, 187, 38, 0.2);

@@ -1,0 +1,178 @@
+/* ===== IMPORT COLORS ===== */
+@import "color.css";
+
+/* ===== GLOBAL ===== */
+* {
+    border: none;
+    border-radius: 0;
+    font-family: "Iosevka Nerd Font";
+    font-size: 12px;
+    min-height: 0;
+}
+
+/* ===== BAR ===== */
+window#waybar {
+    background: transparent;
+    color: @fg1;
+    border-radius: 10px;
+    min-height: 28px;
+}
+
+/* ===== MODULE BASE ===== */
+#workspaces,
+#clock,
+#pulseaudio,
+#bluetooth,
+#battery,
+#network,
+#custom-power-profile,
+#custom-power {
+    margin: 3px 4px;
+    padding: 3px 10px;
+    border-radius: 8px;
+    background: @card_bg;
+}
+
+/* ===== WORKSPACES (WAYBAR SAFE) ===== */
+#workspaces {
+    background: @bg_soft;
+    margin-left: 8px;
+    padding: 2px;
+    border-radius: 10px;
+}
+
+/* base buttons */
+#workspaces button {
+    color: @fg_muted;
+    padding: 3px 8px 3px 4px;
+    margin: 0 2px;
+    border-radius: 8px;
+    background: transparent;
+
+    /* only safe transitions */
+    transition:
+        background-color 0.2s ease,
+        color 0.2s ease;
+}
+
+/* hover */
+#workspaces button:hover {
+    background: @bg1;
+    color: @fg1;
+}
+
+/* active */
+#workspaces button.active {
+    background: @teal;
+    color: @fg0;
+
+    /* subtle highlight instead of transform */
+    border: 1px solid @teal;
+}
+
+/* urgent */
+#workspaces button.urgent {
+    background: @dark_red;
+    color: @fg0;
+}
+
+/* ===== CLOCK ===== */
+#clock {
+    background: @bg2;
+    color: @yellow;
+    font-weight: bold;
+    padding: 3px 14px;
+    border-radius: 10px;
+}
+
+/* ===== AUDIO ===== */
+#pulseaudio {
+    color: @green;
+}
+
+#pulseaudio.muted {
+    color: @red;
+}
+
+/* ===== BLUETOOTH ===== */
+#bluetooth {
+    color: @blue;
+}
+
+#bluetooth.connected {
+    background: @blue_soft;
+}
+
+/* ===== NETWORK ===== */
+#network {
+    color: @aqua;
+}
+
+#network.disconnected {
+    color: @red;
+}
+
+/* ===== BATTERY ===== */
+#battery {
+    color: @yellow;
+}
+
+#battery.charging {
+    color: @green;
+}
+
+#battery.warning {
+    color: @orange;
+}
+
+#battery.critical {
+    color: @red;
+}
+
+/* ===== POWER PROFILE ===== */
+#custom-power-profile {
+    padding: 3px 8px;
+    font-weight: bold;
+}
+
+#custom-power-profile.performance {
+    background: @red_soft;
+    color: @red;
+}
+
+#custom-power-profile.balanced {
+    background: @yellow_soft;
+    color: @yellow;
+}
+
+#custom-power-profile.power-saver {
+    background: @green_soft;
+    color: @green;
+}
+
+/* ===== POWER ===== */
+#custom-power.menu {
+    border-radius: 15px;
+    background: #161320;
+    color: #b5e8e0;
+}
+
+menuitem {
+    border-radius: 15px;
+}
+
+/* ===== ACRYLIC TOOLTIP (FIXED) ===== */
+window#waybar tooltip {
+    background: #161320;
+    color: #b5e8e0;
+
+    border-radius: 10px;
+    padding: 10px 12px;
+
+    border: 1px solid rgba(255, 255, 255, 0.08);
+    box-shadow: 0 8px 25px rgba(0, 0, 0, 0.35);
+}
+
+tooltip label {
+    color: #b5e8e0;
+}

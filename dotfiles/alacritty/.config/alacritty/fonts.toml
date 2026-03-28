@@ -1,0 +1,50 @@
+
+[font]
+size = 14
+
+[font.offset]
+x = 0
+y = 1
+
+[font.glyph_offset]
+x = 0
+y = 0
+
+[font.normal]
+family = "Iosevka Rakesh Nerd Font"
+style = "Regular"
+
+[font.bold]
+family = "Iosevka Rakesh Nerd Font"
+style = "Regular"
+
+[font.italic]
+family = "Iosevka Rakesh Nerd Font"
+style = "Regular"
+
+
+# [font.normal]
+# family = "FiraCode Nerd Font"
+# style = "Regular"
+#
+# [font.bold]
+# family = "FiraCode Nerd Font"
+# style = "Regular"
+#
+# [font.italic]
+# family = "FiraCode Nerd Font"
+# style = "Regular"
+#
+
+# [font.normal]
+# family = "Source Code Pro"
+# style = "Regular"
+#
+# [font.bold]
+# family = "Source Code Pro"
+# style = "Regular"
+#
+# [font.italic]
+# family = "Source Code Pro"
+# style = "Regular"
+#

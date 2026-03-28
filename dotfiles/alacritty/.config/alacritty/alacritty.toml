@@ -1,0 +1,35 @@
+
+general.import = [
+  # "~/.config/alacritty/colors-gruvbox.toml",
+  "~/.config/alacritty/colors-one-dark.toml",
+  "~/.config/alacritty/keybindings.toml",
+  "~/.config/alacritty/fonts.toml"
+]
+
+[window]
+decorations = "none"
+opacity = 0.95
+blur = true
+startup_mode = "Maximized"
+padding = { x = 10 , y = 10 }
+dynamic_padding = true
+
+[scrolling] 
+history = 10000
+multiplier = 4
+
+[cursor]
+style = { shape = "Beam", blinking = "On" }
+vi_mode_style = { shape = "Block", blinking = "On" }
+thickness = 0.15
+
+[mouse]
+hide_when_typing = true
+
+[selection]
+save_to_clipboard = true
+
+[env]
+TERM = "xterm-256color"
+
+

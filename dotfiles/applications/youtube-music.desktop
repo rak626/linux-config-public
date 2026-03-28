@@ -1,7 +1,0 @@
-[Desktop Entry]
-Name=YouTube Music
-Exec=chromium-browser --app=https://music.youtube.com --class=ytmusic --kiosk
-Icon=ytmusic
-Type=Application
-Categories=Audio;
-StartupNotify=true
