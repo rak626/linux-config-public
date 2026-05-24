@@ -1,0 +1,25 @@
+configuration {
+    modi: "drun,run,window,filebrowser";
+    show-icons: true;
+
+    font: "JetBrainsMono Nerd Font 11";
+
+    display-drun: " Apps";
+    display-run: " Run";
+    display-window: " Windows";
+    display-filebrowser: " Files";
+
+    drun-display-format: "{icon} {name}";
+    disable-history: false;
+    hide-scrollbar: true;
+
+    sidebar-mode: true;
+
+    kb-remove-to-eol: "";
+    kb-mode-next: "Control+Tab";
+    kb-mode-previous: "Control+Shift+Tab";
+
+    terminal: "alacritty";
+}
+
+@theme "~/.config/rofi/themes/launcher.rasi"

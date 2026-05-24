@@ -1,0 +1,8 @@
+[window]
+opacity = 0.92
+blur = true
+padding = { x = 12, y = 12 }
+decorations = "none"
+startup_mode = "Windowed"
+
+dynamic_padding = true

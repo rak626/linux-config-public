@@ -1,0 +1,16 @@
+[font]
+size = 16
+offset = { x = 0, y = 1 }
+
+[font.normal]
+family = "Zed Mono Nerd Font"
+
+[font.bold]
+family = "Zed Mono Nerd Font"
+
+[font.italic]
+family = "Zed Mono Nerd Font"
+
+[font.bold_italic]
+family = "Zed Mono Nerd Font"
+
